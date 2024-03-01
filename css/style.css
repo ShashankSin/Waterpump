@@ -141,7 +141,7 @@ header nav ul li i {
   border-bottom-right-radius: 15%;
   overflow: hidden;
 }
-.section--about--staff {
+.card {
   border: none !important;
 }
 .section--about--staff .card-body {
@@ -215,5 +215,90 @@ header nav ul li i {
 .section--about--staff:hover .card-body {
   border-bottom: 2px solid #000;
   transition: border-bottom 0.5s;
+}
+.equipment--card {
+  overflow: hidden;
+  border-radius: none !important;
+}
+.equipment--card .card__image {
+  width: 100%;
+  position: relative;
+}
+.card__image_img {
+  width: 100%;
+  height: 350px;
+}
+.equipment--card .card__image .card__image_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.equipment--card:hover .card__image__scale img {
+  transition: transform 0.5s;
+  transform: scale(1.25, 1.25);
+}
+.card__image__text {
+  padding: 10px 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.card__image__text::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: #ff7103b8;
+  transition: transform 0.5s;
+  transform-origin: 0 0;
+  transition-timing-function: ease;
+}
+.card__image__text__animation::before {
+  transform: scaleY(0);
+}
+.equipment--card:hover .card__image__text__animation::before {
+  transform: scaleY(1);
+}
+.card__image__text h5,
+.card__image__text p,
+.card__image__text a {
+  color: #fff;
+  display: none;
+}
+.equipment--card:hover .card__image__text h5,
+.equipment--card:hover .card__image__text p,
+.equipment--card:hover .card__image__text a {
+  display: block;
+  transition: display 0.5s;
+}
+.card__image__text a {
+  text-decoration: none;
+}
+.equipment--card .card-body {
+  position: relative;
+  padding: 0 !important;
+}
+.equipment--card .card-body p {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.equipment--card:hover .card--body__text p {
+  bottom: -45px;
+  transition: bottom 0.2s;
 }
 /* section ends */
