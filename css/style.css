@@ -20,7 +20,7 @@
 }
 /* header starts */
 header {
-  background-color: #bee9bd;
+  background-color: #bee9bd~;
 }
 .main--logo__img {
   height: 50px;
@@ -137,8 +137,8 @@ header nav ul li i {
   object-fit: cover;
 }
 .swiper-slider__img {
-  border-bottom-left-radius: 10%;
-  border-bottom-right-radius: 10%;
+  border-bottom-left-radius: 15%;
+  border-bottom-right-radius: 15%;
   overflow: hidden;
 }
 /* section ends */
