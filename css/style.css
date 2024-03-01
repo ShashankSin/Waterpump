@@ -11,7 +11,17 @@
 
 /* header starts */
 header {
-  background-color: #012f84;
+  background-color: var(--primary-color);
+}
+.main--logo__img {
+  height: 50px;
+  width: 100px;
+  margin-top: 60px;
+}
+.main--logo__img img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
 }
 .header--social--media {
   display: flex;
@@ -44,7 +54,10 @@ header {
 }
 header nav {
   background-color: #fff;
-  padding: 20px 10px;
+  padding: 20px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 header nav ul {
   display: flex;
@@ -63,5 +76,41 @@ header nav ul li a {
 }
 header nav ul li i {
   rotate: 30deg;
+}
+.header--social--media--contact {
+  display: flex;
+}
+.header--social--media--contact--call {
+  display: flex;
+  flex-direction: row;
+}
+.header--social--media--contact--call__icon i {
+  font-size: 30px;
+  color: #ff0000;
+  border: 1px solid #ff0000;
+  padding: 3px;
+  border-radius: 50%;
+}
+.header--social--media--contact--call__text {
+  text-align: left;
+}
+.header--social--media--contact--call__text span {
+  font-size: 12px;
+  color: #3b3b3b;
+}
+.header--social--media--contact--call__text a {
+  font-size: 16px;
+  color: #000;
+  text-decoration: none;
+}
+@media (min-width: 1400px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1530px !important;
+  }
 }
 /* header ends */
